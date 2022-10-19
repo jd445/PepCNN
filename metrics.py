@@ -54,10 +54,10 @@ def compute_metrics(model, model_name, save_path_acc, test_loader, plot_roc_curv
         target_list.tolist(), pred_list.tolist(), output_dict=True)
 
     # sensitivity is the recall of the positive class
-    sensitivity = classification_metrics['0']['recall']
+    sensitivity = classification_metrics['1']['recall']
 
     # specificity is the recall of the negative class
-    specificity = classification_metrics['1']['recall']
+    specificity = classification_metrics['0']['recall']
 
     # accuracy
     accuracy = classification_metrics['accuracy']
